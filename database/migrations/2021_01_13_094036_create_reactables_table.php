@@ -15,7 +15,7 @@ class CreateReactablesTable extends Migration
     {
         Schema::create('reactables', function (Blueprint $table) {
             $table->id();
-            $table->string('reactable_type');
+            $table->morphs('reactables');
             $table->foreignId('reaction_id')->constrained();
             $table->timestamps();
         });
@@ -29,7 +29,7 @@ class CreateReactablesTable extends Migration
     public function down()
     {
         Schema::table('reactables', function (Blueprint $table) {
-            $table->dropForeign(['reaction_id']);
+            $table->dropForeign('reaction_id');
         });
         Schema::dropIfExists('reactables');
     }

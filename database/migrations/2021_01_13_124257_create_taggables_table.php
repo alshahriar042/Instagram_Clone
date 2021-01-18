@@ -16,8 +16,7 @@ class CreateTaggablesTable extends Migration
         Schema::create('taggables', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tag_id')->constrained();
-            $table->unsignedInteger('taggable_id');
-            $table->string('taggable_type');
+            $table->morphs('taggables');
             $table->timestamps();
         });
     }
@@ -30,7 +29,7 @@ class CreateTaggablesTable extends Migration
     public function down()
     {
         Schema::table('taggables', function (Blueprint $table) {
-            $table->dropForeign(['tag_id']);
+            $table->dropForeign('tag_id');
         });
         Schema::dropIfExists('taggables');
     }

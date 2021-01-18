@@ -17,7 +17,7 @@ class CreatePhotosTable extends Migration
             $table->id();
             $table->string('url');
             $table->string('type');
-            $table->string('type_id');
+            $table->bigInteger('type_id')->unsigned();
             $table->timestamps();
         });
     }
