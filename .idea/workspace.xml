@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee24d1ce-81f6-4311-96eb-79d7a57a933f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/54da1185-12a5-49ad-ba38-cc5fbe1d7052.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/54da1185-12a5-49ad-ba38-cc5fbe1d7052.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_090551_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_090551_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_091340_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_091340_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_093558_create_photos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_093558_create_photos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_093947_create_reaction_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_093947_create_reaction_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_094036_create_reactables_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_094036_create_reactables_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_124257_create_taggables_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_124257_create_taggables_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_124519_create_follows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_124519_create_follows_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_090551_create_posts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_091340_create_comments_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_093558_create_photos_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_093904_create_tags_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_093947_create_reaction_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_094036_create_reactables_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_124257_create_taggables_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_124519_create_follows_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_124856_create_settings_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +178,12 @@
       <workItem from="1610518200708" duration="11131000" />
       <workItem from="1610560520876" duration="1123000" />
       <workItem from="1610722610470" duration="1634000" />
-      <workItem from="1610943131550" duration="7458000" />
+      <workItem from="1610943131550" duration="7961000" />
+      <workItem from="1611107979741" duration="4226000" />
+      <workItem from="1611114957552" duration="3308000" />
+      <workItem from="1611233560113" duration="899000" />
+      <workItem from="1611249890763" duration="2694000" />
+      <workItem from="1611335059559" duration="1589000" />
     </task>
     <servers />
   </component>

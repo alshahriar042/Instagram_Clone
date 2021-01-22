@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFollowsTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateFollowsTable extends Migration
      */
     public function up()
     {
-        Schema::create('follows', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('follower_id')->constrained('users');
+            $table->string('url');
+            $table->morphs('imageable');
             $table->timestamps();
         });
     }
@@ -28,9 +28,6 @@ class CreateFollowsTable extends Migration
      */
     public function down()
     {
-        Schema::table('follows', function (Blueprint $table) {
-            $table->dropForeign(['user_id','follower_id']);
-        });
-        Schema::dropIfExists('follows');
+        Schema::dropIfExists('images');
     }
 }

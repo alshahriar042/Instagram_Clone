@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReactionTable extends Migration
+class CreateTaggablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateReactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('reaction', function (Blueprint $table) {
+        Schema::create('taggables', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->foreignId('tag_id')
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->morphs('taggable');
             $table->timestamps();
         });
     }
@@ -27,6 +30,9 @@ class CreateReactionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reaction');
+        Schema::table('taggables', function (Blueprint $table) {
+            $table->dropForeign(['tag_id']);
+        });
+        Schema::dropIfExists('taggables');
     }
 }
