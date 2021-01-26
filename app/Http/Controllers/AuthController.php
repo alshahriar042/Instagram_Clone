@@ -5,23 +5,30 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Validator;
+
 
 class AuthController extends Controller
 {
     public function register(Request $request){
         $request->validate([
             'name'=> 'required',
-            'email'=>'required|email',
+            'email'=>'required|email|unique:users,email',
             'password'=>'required|min:8',
              'date_of_birth'=>'required',
             'username'=> 'required',
             'gender'=> 'required',
-            'phone'=> 'required',
+            'phone'=> 'required|unique:users,phone',
 
 
         ]);
 
-        $user=User::create($request->all());
+        $user=User::create(array_merge(
+            $request->except('password'),
+            [
+                'password'=>bcrypt($request->password),
+            ]
+        ));
 
         return response()->json($user);
     }
@@ -29,7 +36,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|email|exit:users,email',
+            'email' => 'required|email|exists:users,email',
             'password' => 'required|min:8'
 
         ]);
@@ -40,17 +47,16 @@ class AuthController extends Controller
             $user = Auth::user();
             $token = $user->createToken($user->email . '-' . now());
 
+
             return response()->json([
-                'token' => $token->access_token,
+                'token' => $token->accessToken,
             ]);
 
         }else{
             return response()->json([
 
                'message'=>'Invalid Email or Pass',
-                'error'=>[
 
-                ]
             ]);
         }
     }
